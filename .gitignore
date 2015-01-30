@@ -1,0 +1,4 @@
+.*.sw?
+pkg
+.rspec_system
+.vagrant

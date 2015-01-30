@@ -1,0 +1,16 @@
+{
+  "name": "ccin2p3-site_foo",
+  "version": "0.1.0",
+  "source": "",
+  "author": "ccin2p3",
+  "license": "CeCILL 2.1",
+  "summary": "",
+  "project_page": "",
+  "dependencies": [
+    {
+      "name": "ccin2p3/ccin2p3_stdlib"
+    },{
+      "name": "puppetlabs/stdlib"
+    }
+  ]
+}
