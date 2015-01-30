@@ -1,8 +1,2 @@
 ---
-site_foo::global_param:
-  - hiera_value_A
-  - hiera_value_B
-  - hiera_value_C
-site_foo::profile_myprof_param: true
-site_foo::role_myrole_param: "hiera_string_foo"
-hiera_foo: marche bien
+variable: 'plop'
