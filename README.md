@@ -56,3 +56,9 @@ Gems included by the bundle:
   * rspec-mocks (2.99.3)
   * rspec-puppet (2.0.0 8459e14)
 ```
+
+# Hiera data
+
+Hiera configuration file is here `spec/fixtures/hiera/hiera.yaml`.
+
+The variable the test function is looking up is named ... `variable` and defined in file https://github.com/riton/rspec-hiera-test-function/blob/master/spec/fixtures/hiera/test.yaml.
