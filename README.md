@@ -41,6 +41,7 @@ Gems included by the bundle:
   * diff-lcs (1.2.5)
   * facter (1.7.6)
   * hiera (1.3.4)
+  * hiera-puppet-helper (1.0.1)
   * json_pure (1.8.2)
   * metaclass (0.0.4)
   * mocha (1.1.0)

@@ -2,7 +2,7 @@
 
 require 'spec_helper'
 
-describe Puppet::Parser::Functions.function(:test_hiera), :focus => false do
+describe 'test_hiera', :type => :puppet_function, :focus => true do
   let(:scope) { PuppetlabsSpec::PuppetInternals.scope }
 
   describe 'useless' do
