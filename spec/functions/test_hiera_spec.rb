@@ -2,10 +2,12 @@
 
 require 'spec_helper'
 
-describe Puppet::Parser::Functions.function(:test_hiera), :focus => true do
+describe Puppet::Parser::Functions.function(:test_hiera), :focus => false do
   let(:scope) { PuppetlabsSpec::PuppetInternals.scope }
 
   describe 'useless' do
+
+    include_context "hieradata"
     
     it 'still useless' do
         v = scope.function_test_hiera([])
