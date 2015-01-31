@@ -3,30 +3,37 @@
 ```
 $ bundle install --path=$PWD/.mybundle
 $ bundle exec rake spec SPEC_OPTS='--color --format documentation --tag focus'
-/usr/bin/ruby -S rspec spec/functions/test_hiera_spec.rb --color
+/usr/bin/ruby -S rspec spec/classes/site_foo_spec.rb spec/functions/test_hiera_spec.rb --color
 Run options: include {:focus=>true}
 
-function_test_hiera
+site_foo
+  should contain Notify[foo] with message => "bar"
+
+test_hiera
   useless
     still useless (FAILED - 1)
 
 Failures:
 
-  1) function_test_hiera useless still useless
+  1) test_hiera useless still useless
      Failure/Error: v = scope.function_test_hiera([])
      Puppet::ParseError:
        Could not find data item variable in any Hiera data file and no default supplied
      # ./lib/puppet/parser/functions/test_hiera.rb:10:in `real_function_test_hiera'
-     # ./spec/functions/test_hiera_spec.rb:11
+     # ./spec/functions/test_hiera_spec.rb:13
 
-Finished in 0.03127 seconds
-1 example, 1 failure
+Finished in 0.12823 seconds
+2 examples, 1 failure
 
 Failed examples:
 
-rspec ./spec/functions/test_hiera_spec.rb:10 # function_test_hiera useless still useless
-/usr/bin/ruby -S rspec spec/functions/test_hiera_spec.rb --color failed
+rspec ./spec/functions/test_hiera_spec.rb:12 # test_hiera useless still useless
+/usr/bin/ruby -S rspec spec/classes/site_foo_spec.rb spec/functions/test_hiera_spec.rb --color failed
 ```
+
+*Conclusion*:
+* Hiera lookup from puppet code is working and uses established test hierarchy
+* Hiera lookup within a puppet function does not seem to use established test hierarchy
 
 My environment
 
